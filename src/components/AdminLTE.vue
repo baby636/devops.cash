@@ -1,9 +1,7 @@
 <template>
     <div class="wrapper">
+        <Topbar />
         <Navbar />
-
-        <Sidebar />
-        <!-- Main Sidebar Container -->
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -845,8 +843,8 @@
         </div>
         <!-- /.content-wrapper -->
 
-        <Toolbar />
         <Footer />
+        <Sidebar />
     </div>
     <!-- ./wrapper -->
 </template>
@@ -857,7 +855,7 @@ import Footer from '@/components/Footer.vue'
 import Header from '@/components/Header.vue'
 import Navbar from '@/components/Navbar.vue'
 import Sidebar from '@/components/Sidebar.vue'
-import Toolbar from '@/components/Toolbar.vue'
+import Topbar from '@/components/Topbar.vue'
 
 export default {
     components: {
@@ -865,7 +863,7 @@ export default {
         Header,
         Navbar,
         Sidebar,
-        Toolbar,
+        Topbar,
     },
 }
 </script>
