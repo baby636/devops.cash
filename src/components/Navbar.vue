@@ -25,12 +25,12 @@
 
                     <!-- Dashboard -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link active">
+                        <router-link to="/" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Social Media -->
@@ -124,13 +124,13 @@
 
                     <!-- Projects -->
                     <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                        <router-link to="projects" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Projects
                                 <span class="right badge badge-danger">New</span>
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <li class="nav-item has-treeview">

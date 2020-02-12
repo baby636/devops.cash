@@ -2,16 +2,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-/* Import router. */
-import VueRouter from 'vue-router'
-
-/* Initialize router. */
-Vue.use(VueRouter)
+/* Import (local) modules. */
+import router from './router'
 
 /* Set production flag. */
 Vue.config.productionTip = false
 
 /* Initialize Vuejs. */
 new Vue({
+    router,
     render: h => h(App),
 }).$mount('#app')
