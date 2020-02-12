@@ -33,12 +33,13 @@
                                         Contributors
                                     </th>
                                     <th>
-                                        Project Progress
+                                        Progress
                                     </th>
                                     <th style="width: 8%" class="text-center">
                                         Status
                                     </th>
-                                    <th style="width: 20%">
+                                    <th style="width: 20%" class="text-right">
+                                        Links
                                     </th>
                                 </tr>
                             </thead>
@@ -65,24 +66,30 @@
                                                 <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar2.png">
                                             </li>
                                             <li class="list-inline-item">
+                                                <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar4.png">
+                                            </li>
+                                            <li class="list-inline-item">
                                                 <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar3.png">
                                             </li>
                                             <li class="list-inline-item">
-                                                <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar04.png">
+                                                <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar5.png">
+                                            </li>
+                                            <li class="list-inline-item">
+                                                +4
                                             </li>
                                         </ul>
                                     </td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar bg-green" role="progressbar" aria-volumenow="57" aria-volumemin="0" aria-volumemax="100" style="width: 57%">
+                                            <div class="progress-bar bg-yellow" role="progressbar" aria-volumenow="15" aria-volumemin="0" aria-volumemax="100" style="width: 15%">
                                             </div>
                                         </div>
                                         <small>
-                                            57% Complete
+                                            15% Complete
                                         </small>
                                     </td>
                                     <td class="project-state">
-                                        <span class="badge badge-success">Success</span>
+                                        <span class="badge badge-warning">Started</span>
                                     </td>
                                     <td class="project-actions text-right">
                                         <Links />
@@ -107,21 +114,21 @@
                                                 <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar.png">
                                             </li>
                                             <li class="list-inline-item">
-                                                <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar2.png">
+                                                <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar4.png">
                                             </li>
                                         </ul>
                                     </td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar bg-green" role="progressbar" aria-volumenow="47" aria-volumemin="0" aria-volumemax="100" style="width: 47%">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-volumenow="60" aria-volumemin="0" aria-volumemax="100" style="width: 60%">
                                             </div>
                                         </div>
                                         <small>
-                                            47% Complete
+                                            60% Complete
                                         </small>
                                     </td>
                                     <td class="project-state">
-                                        <span class="badge badge-success">Success</span>
+                                        <span class="badge badge-success">BUIDLing</span>
                                     </td>
                                     <td class="project-actions text-right">
                                         <Links />
@@ -149,15 +156,15 @@
                                     </td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar bg-green" role="progressbar" aria-volumenow="77" aria-volumemin="0" aria-volumemax="100" style="width: 77%">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-volumenow="90" aria-volumemin="0" aria-volumemax="100" style="width: 90%">
                                             </div>
                                         </div>
                                         <small>
-                                            77% Complete
+                                            90% Complete
                                         </small>
                                     </td>
                                     <td class="project-state">
-                                        <span class="badge badge-success">Success</span>
+                                        <span class="badge badge-success">BUIDLing</span>
                                     </td>
                                     <td class="project-actions text-right">
                                         <Links />
@@ -166,7 +173,7 @@
 
                                 <tr>
                                     <td>
-                                        #
+                                        4
                                     </td>
                                     <td>
                                         <a>
@@ -186,15 +193,15 @@
                                     </td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar bg-green" role="progressbar" aria-volumenow="12" aria-volumemin="0" aria-volumemax="100" style="width: 12%">
+                                            <div class="progress-bar bg-red" role="progressbar" aria-volumenow="5" aria-volumemin="0" aria-volumemax="100" style="width: 12%">
                                             </div>
                                         </div>
                                         <small>
-                                            12% Complete
+                                            5% Complete
                                         </small>
                                     </td>
                                     <td class="project-state">
-                                        <span class="badge badge-success">Success</span>
+                                        <span class="badge badge-danger">Planning</span>
                                     </td>
                                     <td class="project-actions text-right">
                                         <Links />

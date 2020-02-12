@@ -33,88 +33,32 @@
                         </router-link>
                     </li>
 
-                    <!-- Social Media -->
+                    <!-- My Desktop -->
                     <li class="nav-item has-treeview">
                         <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-desktop"></i>
                             <p>
-                                Social Media
+                                My Desktop
                                 <i class="fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">6</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Top Navigation</p>
+                                    <p>Inbox</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Top Navigation + Sidebar</p>
+                                    <p>Compose</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/boxed.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Boxed</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Sidebar</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Navbar</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Footer</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Collapsed Sidebar</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <!-- Charts & Data -->
-                    <li class="nav-item has-treeview">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-chart-pie"></i>
-                            <p>
-                                Charts & Data
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="pages/charts/chartjs.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>ChartJS</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/charts/flot.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Flot</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/charts/inline.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Inline</p>
+                                    <p>Read</p>
                                 </a>
                             </li>
                         </ul>
@@ -133,144 +77,26 @@
                         </router-link>
                     </li>
 
+                    <!-- Workspaces -->
                     <li class="nav-item has-treeview">
                         <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
+                            <i class="nav-icon fas fa-copy"></i>
                             <p>
-                                Pages
+                                Workspaces
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/examples/invoice.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Invoice</p>
+                                    <p>Code Editor</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/examples/profile.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Profile</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/e-commerce.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>E-commerce</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/projects.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Projects</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/project-add.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Project Add</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/project-edit.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Project Edit</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/project-detail.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Project Detail</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/contacts.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Contacts</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-treeview">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon far fa-plus-square"></i>
-                            <p>
-                                Extras
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="pages/examples/login.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Login</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/register.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Register</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/forgot-password.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Forgot Password</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/recover-password.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Recover Password</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/lockscreen.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Lockscreen</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Legacy User Menu</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/language-menu.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Language Menu</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/404.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Error 404</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/500.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Error 500</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/pace.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Pace</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/blank.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Blank Page</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="starter.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Starter Page</p>
+                                    <p>Graphics Studio</p>
                                 </a>
                             </li>
                         </ul>
@@ -280,7 +106,7 @@
 
                     <!-- Event Calendar -->
                     <li class="nav-item">
-                        <a href="pages/calendar.html" class="nav-link">
+                        <a href="javascript://" class="nav-link">
                             <i class="nav-icon fas fa-calendar-alt"></i>
                             <p>
                                 Event Calendar
@@ -289,71 +115,85 @@
                         </a>
                     </li>
 
-                    <!-- News -->
+                    <!-- News.cash -->
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="javascript://" class="nav-link">
                             <i class="nav-icon fas fa-file"></i>
                             <p>
-                                News
+                                News.cash
                                 <span class="badge badge-info right">1</span>
                             </p>
                         </a>
                     </li>
 
-                    <!-- Memo -->
+                    <!-- Memo.cash -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Memo.cash
+                                <span class="badge badge-info right">1</span>
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Charts & Data -->
                     <li class="nav-item has-treeview">
                         <a href="javascript://" class="nav-link">
-                            <i class="nav-icon far fa-envelope"></i>
+                            <i class="nav-icon fas fa-chart-pie"></i>
                             <p>
-                                Memo
-                                <i class="fas fa-angle-left right"></i>
+                                Charts & Data
+                                <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Inbox</p>
+                                    <p>ChartJS</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/mailbox/compose.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Compose</p>
+                                    <p>Flot</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Read</p>
+                                    <p>Inline</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="nav-header">EXT RESOURCES</li>
+                    <li class="nav-header">RECOMMENDED RESOURCES</li>
 
-                    <!-- GitHub -->
+                    <!-- StackExchange -->
                     <li class="nav-item">
-                        <a href="https://github.com/modenero/devops.cash" target="_blank" class="nav-link">
-                            <i class="nav-icon far fa-circle text-info"></i>
-                            <p>GitHub</p>
+                        <a href="https://area51.stackexchange.com/proposals/123786/bitcoin-cash" target="_blank" class="nav-link">
+                            <i class="nav-icon fab fa-stack-overflow text-warning"></i>
+                            <p>BCH.StackExchange</p>
+                            <i class="nav-icon fas fa-external-link-alt"></i>
                         </a>
                     </li>
 
                     <!-- Reddit -->
                     <li class="nav-item">
                         <a href="https://www.reddit.com/r/DevOpsCash/" target="_blank" class="nav-link">
-                            <i class="nav-icon far fa-circle text-danger"></i>
-                            <p>Reddit</p>
+                            <i class="nav-icon fab fa-reddit text-danger"></i>
+                            <p>r/DevOpsCash</p>
+                            <i class="nav-icon fas fa-external-link-alt"></i>
                         </a>
                     </li>
 
-                    <!-- StackExchange -->
+                    <!-- GitHub -->
                     <li class="nav-item">
-                        <a href="https://area51.stackexchange.com/proposals/123786/bitcoin-cash" target="_blank" class="nav-link">
-                            <i class="nav-icon far fa-circle text-warning"></i>
-                            <p>StackExchange</p>
+                        <a href="https://github.com/modenero/devops.cash" target="_blank" class="nav-link">
+                            <i class="nav-icon fab fa-github text-info"></i>
+                            <p>Fork us on GitHub</p>
+                            <i class="nav-icon fas fa-external-link-alt"></i>
                         </a>
                     </li>
 
@@ -391,5 +231,12 @@ div .build-info,
 div .build-info a {
     font-size: 12px;
     color: rgba(220, 220, 220, 0.5);
+}
+
+.nav-icon.fa-external-link-alt {
+    font-size: 0.70rem !important;
+    color: rgba(255, 255, 255, 1.0);
+
+    margin-left: 3px;
 }
 </style>

@@ -3,11 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#1337f3">
+    <meta name="description" content="Development Operations (DevOps) Center for effortless BUIDLing over Bitcoin Cash.">
 
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
 
     <title>DevOps.cash — LET'S BUIDL BCH !!</title>
+
+    <!-- Open graph -->
+    <meta property="og:title" content="DevOps.cash">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Development Operations (DevOps) Center for effortless BUIDLing over Bitcoin Cash.">
+    <meta property="og:image" content="https://devops.cash/poster.jpg?1580211230">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevOps.cash">
+    <meta name="twitter:description" content="Development Operations (DevOps) Center for effortless BUIDLing over Bitcoin Cash.">
+    <meta name="twitter:image" content="https://devops.cash/poster.jpg?1580211230">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -56,6 +71,25 @@
 
 <!-- PAGE SCRIPTS -->
 <script src="./js/pages/dashboard2.js"></script>
+
+<!-- BITBOX for Bitcoin Cash (https://developer.bitcoin.com/bitbox) -->
+<script src="./js/bitbox.js"></script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.modenero.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 
 </body>
 </html>
