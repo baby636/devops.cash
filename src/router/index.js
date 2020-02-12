@@ -22,5 +22,6 @@ const routes = [{
 /* Export Vue Router. */
 export default new VueRouter({
     mode: 'history',
+    linkActiveClass: 'active', // TODO: We should localize this to Navbar.vue's scope.
     routes
 })

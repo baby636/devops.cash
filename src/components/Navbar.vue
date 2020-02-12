@@ -25,7 +25,7 @@
 
                     <!-- Dashboard -->
                     <li class="nav-item">
-                        <router-link to="/" class="nav-link active">
+                        <router-link to="/" class="nav-link" exact>
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
