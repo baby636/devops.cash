@@ -68,7 +68,7 @@
 
                     <!-- Projects -->
                     <li class="nav-item">
-                        <router-link to="projects" class="nav-link">
+                        <router-link to="/projects" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Projects

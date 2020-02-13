@@ -44,7 +44,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr @click="openProject('devops-cash')">
                                     <td>
                                         1
                                     </td>
@@ -59,7 +59,7 @@
                                     </td>
                                     <td>
                                         <ul class="list-inline">
-                                            <li class="list-inline-item">
+                                            <li class="list-inline-item" @click.stop="openProfile('nyusternie')">
                                                 <img alt="Avatar" class="table-avatar" src="@/assets/img/avatar.png">
                                             </li>
                                             <li class="list-inline-item">
@@ -220,6 +220,9 @@
 </template>
 
 <script>
+/* Import modules. */
+import superagent from 'superagent'
+
 /* Import components. */
 import Header from '@/components/Header.vue'
 
@@ -232,9 +235,49 @@ export default {
 
         Links,
     },
+    data: () => {
+        return {
+            projects: null
+        }
+    },
+    methods: {
+        openProfile(_profileId) {
+            this.$router.push(`/profile/${_profileId}`)
+        },
+
+        openProject(_projectId) {
+            this.$router.push(`/projects/${_projectId}`)
+        },
+    },
+    created: function () {
+        /* Set api endpoint. */
+        // TODO Move to vuex store.
+        const ENDPOINT = 'https://api.devops.cash/v1'
+
+        superagent
+            .get(ENDPOINT + '/projects')
+            // .send({ name: 'Manny', species: 'cat' }) // sends a JSON post body
+            // .set('X-API-Key', 'foobar')
+            .set('accept', 'json')
+            .end((err, res) => {
+                if (err) {
+                    return console.error('API ERROR:', err)
+                }
+
+                console.log('API RESULT', res)
+
+                /* Set projects. */
+                this.projects = res.body
+            })
+    },
+    mounted: function () {
+        //
+    }
 }
 </script>
 
 <style scoped>
-/*  */
+tbody tr {
+    cursor: pointer;
+}
 </style>

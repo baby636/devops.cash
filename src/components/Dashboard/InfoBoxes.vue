@@ -72,7 +72,7 @@
                     <i class="fas fa-users"></i>
                 </span>
 
-                <div class="info-box-content">
+                <div class="info-box-content" @click="goto('/contributors')">
                     <span class="info-box-text">Devs BUILDing</span>
                     <span class="info-box-number">
                         9 <small class="text-danger">(2 new)</small> |
@@ -136,6 +136,12 @@ export default {
             }
         },
 
+        /**
+         * Goto (Page Location)
+         */
+        goto(_location) {
+            this.$router.push(_location)
+        },
     },
     created: function () {
         /* Initialize BITBOX. */
@@ -149,5 +155,7 @@ export default {
 </script>
 
 <style scoped>
-/*  */
+.info-box-content {
+    cursor: pointer;
+}
 </style>
