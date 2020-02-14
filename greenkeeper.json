@@ -1,0 +1,33 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "public/plugins/daterangepicker/package.json",
+        "public/plugins/fullcalendar-bootstrap/package.json",
+        "public/plugins/fullcalendar-daygrid/package.json",
+        "public/plugins/fullcalendar-interaction/package.json",
+        "public/plugins/fullcalendar-timegrid/package.json",
+        "public/plugins/fullcalendar/package.json",
+        "public/plugins/icheck-bootstrap/package.json",
+        "public/plugins/ion-rangeslider/package.json",
+        "public/plugins/jquery-mousewheel/package.json",
+        "public/plugins/jquery-ui/package.json",
+        "public/plugins/raphael/package.json",
+        "public/plugins/sweetalert2-theme-bootstrap-4/package.json",
+        "src/assets/img/plugins/daterangepicker/package.json",
+        "src/assets/img/plugins/fullcalendar-bootstrap/package.json",
+        "src/assets/img/plugins/fullcalendar-daygrid/package.json",
+        "src/assets/img/plugins/fullcalendar-interaction/package.json",
+        "src/assets/img/plugins/fullcalendar-timegrid/package.json",
+        "src/assets/img/plugins/fullcalendar/package.json",
+        "src/assets/img/plugins/icheck-bootstrap/package.json",
+        "src/assets/img/plugins/ion-rangeslider/package.json",
+        "src/assets/img/plugins/jquery-mousewheel/package.json",
+        "src/assets/img/plugins/jquery-ui/package.json",
+        "src/assets/img/plugins/raphael/package.json",
+        "src/assets/img/plugins/sweetalert2-theme-bootstrap-4/package.json"
+      ]
+    }
+  }
+}
