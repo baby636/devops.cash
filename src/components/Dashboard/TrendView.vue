@@ -54,17 +54,8 @@
                 <span class="info-box-icon"><i class="far fa-newspaper"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Read.cash</span>
+                    <span class="info-box-text">Trending News</span>
                     <span class="info-box-number">5,200</span>
-                </div>
-            </div>
-
-            <div class="info-box mb-3 bg-info">
-                <span class="info-box-icon"><i class="fab fa-twitter"></i></span>
-
-                <div class="info-box-content">
-                    <span class="info-box-text">Twitter</span>
-                    <span class="info-box-number">163,921</span>
                 </div>
             </div>
 
@@ -72,8 +63,17 @@
                 <span class="info-box-icon"><i class="fab fa-reddit"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Reddit</span>
-                    <span class="info-box-number">114,381</span>
+                    <span class="info-box-text">Trending Discussions</span>
+                    <span class="info-box-number">4,381</span>
+                </div>
+            </div>
+
+            <div class="info-box mb-3 bg-info">
+                <span class="info-box-icon"><i class="fab fa-twitter"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Trending Events</span>
+                    <span class="info-box-number">3,921</span>
                 </div>
             </div>
 
@@ -81,8 +81,8 @@
                 <span class="info-box-icon"><i class="fas fa-broadcast-tower"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Memo.cash</span>
-                    <span class="info-box-number">92,050</span>
+                    <span class="info-box-text">Trending Data</span>
+                    <span class="info-box-number">2,050</span>
                 </div>
             </div>
 

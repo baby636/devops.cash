@@ -11,6 +11,9 @@ The goal for __[DevOps.cash](https://nito.cash/)__ is to support the Bitcoin Cas
 ### Planned
 
 - [ ] Create your own project.
+- [ ] rest.devops.cash API.
+- [ ] ws.devops.cash WebSocket.
+- [ ] git.devops.cash GitLab repository.
 
 ### Complete
 

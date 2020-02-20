@@ -15,7 +15,7 @@ as well as any others that wishes to BUIDL on top of BCH.
 
 # Publishing your project(s) on DevOps
 
-Anyone can manage their personal and/or team projects on DevOps. However, in order to __PUBLISH,__ it is required that your project open-source __ALL__ client-side _(user-facing)_ source code.
+Anyone can manage their personal and/or team projects on DevOps. However, in order to __PUBLISH,__ it is required that project use open source software licenses compatible with other projects in the Bitcoin Cash ecosystem for __ALL__ client-side _(user-facing)_ source code.
 
 ### What is client-side?
 

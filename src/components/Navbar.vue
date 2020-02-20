@@ -46,25 +46,25 @@
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Inbox</p>
+                                    <p>Notifications</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Compose</p>
+                                    <p>Messages</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Read</p>
+                                    <p>Mentions</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="nav-header">FOR BUIDLERS</li>
+                    <li class="nav-header">PRO BUIDLERS</li>
 
                     <!-- Projects -->
                     <li class="nav-item">
@@ -99,10 +99,44 @@
                                     <p>Graphics Studio</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Sandbox</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                                    <p>more workspaces...</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
-                    <li class="nav-header">COMMUNITY</li>
+                    <li class="nav-header">COMMUNITY CENTER</li>
+
+                    <!-- Latest News -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Latest News
+                                <span class="badge badge-info right">1</span>
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Source Feeds -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Discussions
+                                <span class="badge badge-info right">1</span>
+                            </p>
+                        </a>
+                    </li>
 
                     <!-- Event Calendar -->
                     <li class="nav-item">
@@ -111,28 +145,6 @@
                             <p>
                                 Event Calendar
                                 <span class="badge badge-info right">2</span>
-                            </p>
-                        </a>
-                    </li>
-
-                    <!-- News.cash -->
-                    <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
-                            <p>
-                                News.cash
-                                <span class="badge badge-info right">1</span>
-                            </p>
-                        </a>
-                    </li>
-
-                    <!-- Memo.cash -->
-                    <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
-                            <p>
-                                Memo.cash
-                                <span class="badge badge-info right">1</span>
                             </p>
                         </a>
                     </li>
@@ -168,7 +180,70 @@
                         </ul>
                     </li>
 
-                    <li class="nav-header">RECOMMENDED RESOURCES</li>
+                    <li class="nav-header">SUPPORT CENTER</li>
+
+                    <!-- Getting Started -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                BUIDLing 101
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Tutorials -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Guides &amp; Tutorials
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- FAQ -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                FAQ
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Contact Us -->
+                    <li class="nav-item has-treeview">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-info-circle text-info"></i>
+                            <p>
+                                Contact Us
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="fab fa-slack nav-icon"></i>
+                                    <p>Slack</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="fas fa-comment-dots nav-icon"></i>
+                                    <p>Matrix</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="fas fa-envelope-square nav-icon"></i>
+                                    <p>Open a Ticket</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-header">STAFF LINKS</li>
 
                     <!-- StackExchange -->
                     <li class="nav-item">

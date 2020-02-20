@@ -73,7 +73,7 @@
                 </span>
 
                 <div class="info-box-content" @click="goto('/contributors')">
-                    <span class="info-box-text">Devs BUILDing</span>
+                    <span class="info-box-text">Devs BUIDLing</span>
                     <span class="info-box-number">
                         9 <small class="text-danger">(2 new)</small> |
                         4 <small class="text-danger">(0 new)</small>

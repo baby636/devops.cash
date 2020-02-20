@@ -1,12 +1,11 @@
 {
   "name": "devops.cash",
   "version": "2020.2.11",
-  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "3.6.4",
@@ -31,6 +30,7 @@
   "eslintConfig": {
     "root": true,
     "env": {
+      "jest": true,
       "node": true
     },
     "extends": [
@@ -45,5 +45,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "license": "MIT"
 }
