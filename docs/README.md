@@ -1,6 +1,6 @@
 # Welcome to the Documentation<br>for BCH Development Operations
 
-![Bitcoin Causes Poster](https://devops.cash/poster.jpg?1582376269)
+![DevOps Poster](https://devops.cash/poster.jpg?1582376269)
 
 ### https://devops.cash
 
