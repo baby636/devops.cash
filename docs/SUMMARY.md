@@ -2,23 +2,29 @@
 
 * [Welcome](README.md)
 
-## User Accounts
+    * [0.1. Why DevOps.cash?](welcome/why.md)
 
-* [Registration](accounts/registration.md)
+* [1. User Accounts]()
 
-## Projects
+    * [1.1. Registration](accounts/registration.md)
 
-* [Publishing](projects/publishing.md)
+* [2. Projects]()
 
-## More Documentation
+    * [2.1. Publishing](projects/publishing.md)
 
-* [Changelog](CHANGELOG.md)
-* [Roadmap](ROADMAP.md)
-* [Contributing](CONTRIBUTING.md)
+* [2. Guides & Tutorials]()
 
-## Legal
+    * [2.1. Web4BCH](guides/web4bch.md)
 
-* [Code of Conduct]()
-* [Terms of Use]()
-* [Privacy Notice]()
-* [Cookie Notice]()
+* [3. More Documentation]()
+
+    * [3.1. Changelog](CHANGELOG.md)
+    * [3.2. Roadmap](ROADMAP.md)
+    * [3.3. Contributing](CONTRIBUTING.md)
+
+* [4. Legal]()
+
+    * [4.1. Code of Conduct]()
+    * [4.2. Terms of Use]()
+    * [4.3. Privacy Notice]()
+    * [4.4. Cookie Notice]()
