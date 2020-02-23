@@ -16,7 +16,7 @@
                     <img src="@/assets/img/cyber-hacker-icon.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="javascript://" class="d-block" @click="signin">Incognito <small>[sign-in]</small></a>
+                    <a href="javascript://" class="d-block" @click="signin">Incognito <small>[Sign in]</small></a>
                 </div>
             </div>
 
@@ -291,6 +291,7 @@ import moment from 'moment'
 export default {
     data: () => {
         return {
+            bitbox: null,
             version: '20.2.12',
         }
     },
@@ -300,6 +301,20 @@ export default {
         },
     },
     methods: {
+        /**
+         * Initialize BITBOX
+         */
+        initBitbox() {
+            console.info('Initializing BITBOX..')
+
+            try {
+                /* Initialize BITBOX. */
+                this.bitbox = new window.BITBOX()
+            } catch (err) {
+                console.error(err)
+            }
+        },
+
         /**
          * Send Transaction
          */
@@ -376,8 +391,17 @@ export default {
                 // const cashid = new CashID()
                 const cashid = new CashID('api.devops.cash', '/v1/cashid')
 
-                const action = 'signin'
-                const data = moment().format('llll')
+                /* Set action. */
+                const action = 'Sign in'
+
+                /* Set timestamp. */
+                // NOTE: This is NOT currently used for any purpose during
+                //       user authentication.
+                const data = moment().format('LLLL (x)')
+
+                /* Set metadata. */
+                // NOTE: This is NOT currently used for any purpose during
+                //       user authentication.
                 const metadata = {
                     optional: {
                         identity: ['name', 'nickname'],
@@ -387,15 +411,21 @@ export default {
 
                 /* Set URI. */
                 const cashIDRequest = cashid.createRequest(action, data, metadata)
-                // const cashIDRequest = cashid.createRequest('', '', {})
-                // const cashIDRequest = 'cashid:demo.cashid.info/api/parse.php?x=791621984'
                 console.log('CASHID REQUEST', cashIDRequest)
+
+                /* Set CashID buffer. */
+                const cidBuf = Buffer.from(cashIDRequest)
+                console.log('CASHID REQUEST BUFFER', cidBuf)
+
+                /* Set CashID (authorization) hash. */
+                const authHash = this.bitbox.Crypto.sha256(cidBuf).toString('hex')
+                console.log('CASHID AUTH HASH', authHash)
 
                 /* Initialize signature function. */
                 const sigFunc = (err, res) => {
                     if (err) return console.error('SIGFUNC ERROR:', err)
 
-                    console.log('SIGFUNC RESPONSE', res)
+                    console.log('SIGFUNC RESPONSE', res, authHash)
                 }
 
                 web4bch.bch.sign(
@@ -408,6 +438,10 @@ export default {
              }
 
         },
+    },
+    created: function () {
+        /* Initialize BITBOX. */
+        this.initBitbox()
     },
 }
 </script>
