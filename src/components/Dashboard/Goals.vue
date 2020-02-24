@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Monthly Goal Summary</h5>
+                    <h5 class="card-title">Development Goals View</h5>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -48,35 +48,23 @@
                                 <strong>Goal Completion</strong>
                             </p>
 
-                            <div class="progress-group">
-                                Add Products to Cart
-                                <span class="float-right"><b>160</b>/200</span>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-primary" style="width: 80%"></div>
-                                </div>
-                            </div>
+                            <div
+                                v-for="(goal, index) of goals"
+                                v-bind:key="goal.title"
+                                class="progress-group"
+                            >
+                                {{goal.title}}
 
-                            <div class="progress-group">
-                                Complete Purchase
-                                <span class="float-right"><b>310</b>/400</span>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-danger" style="width: 75%"></div>
-                                </div>
-                            </div>
+                                <span class="float-right">
+                                    <b>{{goal.completed}}</b>/{{goal.target}}
+                                </span>
 
-                            <div class="progress-group">
-                                <span class="progress-text">Visit Premium Page</span>
-                                <span class="float-right"><b>480</b>/800</span>
                                 <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" style="width: 60%"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress-group">
-                                Send Inquiries
-                                <span class="float-right"><b>250</b>/500</span>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                    <div
+                                        class="progress-bar"
+                                        :class="goal.bg"
+                                        :style="{ width: completionPct(index) }"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +112,72 @@
 </template>
 
 <script>
+/* Import modules. */
+import numeral from 'numeral'
+
 export default {
-    //
+    data: () => {
+        return {
+            goals: []
+        }
+    },
+    computed: {
+        completionPct() {
+            // NOTE: We use this "method" to allow for the parameter.
+            // https://stackoverflow.com/a/40539522
+            return _goalId => {
+                /* Validate goals. */
+                if (!this.goals) {
+                    return ''
+                }
+
+                /* Calculate completion pct. */
+                const pct = this.goals[_goalId].completed / this.goals[_goalId].target
+                // console.log('COMPLETION PCT', pct)
+
+                /* Set formatted. */
+                const formatted = numeral(pct).format('0.0%')
+                // console.log('COMPLETION FORMATTED', formatted)
+
+                /* Return style. */
+                return formatted
+            }
+        }
+    },
+    created: function () {
+        /* Add goal. */
+        this.goals.push({
+            title: 'Bull Run to $1k by Dec 2020',
+            completed: 391,
+            target: 1000,
+            bg: 'bg-primary',
+        })
+
+        /* Add goal. */
+        this.goals.push({
+            title: 'Development Roadmap',
+            completed: 7,
+            target: 19,
+            bg: 'bg-primary',
+        })
+
+        /* Add goal. */
+        this.goals.push({
+            title: 'BCH.StackExchange Commitments',
+            completed: 31,
+            target: 100,
+            bg: 'bg-warning',
+        })
+
+        /* Add goal. */
+        this.goals.push({
+            title: 'SHA256 Total Hash Rate %',
+            completed: 4,
+            target: 80,
+            bg: 'bg-danger',
+        })
+
+    },
 }
 </script>
 

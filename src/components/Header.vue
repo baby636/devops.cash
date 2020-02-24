@@ -14,7 +14,7 @@
 
                         <br />
                         <small>
-                            <span class="text-secondary">Next <strong class="text-danger">bull market</strong> starts in <strong>78d : 23h : 59m</strong></span>
+                            <span class="text-secondary">Next <strong class="text-danger">bull market</strong> starts in <strong>{{nextBullRun}}</strong></span>
                             <span class="text-secondary">&nbsp;...&nbsp;</span>
                             <strong>It's time to <span class="text-danger">GO!!</span></strong>
                         </small>
@@ -32,6 +32,9 @@
 </template>
 
 <script>
+/* Import modules. */
+import moment from 'moment'
+
 export default {
     props: {
         pageId: String
@@ -51,7 +54,41 @@ export default {
             default:
                 return 'Unknown Page'
             }
-        }
+        },
+
+        /**
+         * Next Bull Run (Countdown)
+         *
+         * NOTE: NO idea of the maths is correct .. I'm so bad :-(
+         */
+        nextBullRun: function () {
+            /* Set halvening date. */
+            const halvening = moment([2020, 4, 9])
+
+            /* Calculate remaining (days). */
+            const days = halvening.diff(moment(), 'days')
+            // console.log('DAYS REMAINING', days)
+
+            /* Calculate remaining (hours). */
+            const hours = halvening.diff(moment(), 'hours')
+            // console.log('HOURS REMAINING', hours)
+
+            const h = hours - (days * 24)
+            // console.log('H REMAINING', h)
+
+            /* Calculate remaining (minutes). */
+            const minutes = halvening.diff(moment(), 'minutes')
+            // console.log('MINUTES REMAINING', minutes)
+
+            const m = minutes - (days * 24 * 60) - (h * 60)
+            // console.log('M REMAINING', m)
+
+            /* Set remaining (formatted) time. */
+            const remaining = `${days}d : ${h}h : ${m}m`
+
+            /* Return remaining. */
+            return remaining
+        },
     },
     methods: {
         /**
