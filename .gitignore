@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+_book
 
 # local env files
 .env.local
@@ -22,3 +23,4 @@ yarn-error.log*
 
 api
 NOTES
+REF

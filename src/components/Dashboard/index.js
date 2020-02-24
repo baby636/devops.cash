@@ -1,11 +1,23 @@
 /* Import components. */
-import GoalSummary from './GoalSummary'
-import InfoBoxes from './InfoBoxes'
-import TrendView from './TrendView'
+import Calendar from './Calendar'
+import Featured from './Featured'
+import Feeds from './Feeds'
+import Goals from './Goals'
+import Highlights from './Highlights'
+import Newcomers from './Newcomers'
+import Todo from './Todo'
+import Trends from './Trends'
+import Updates from './Updates'
 
 /* Export components. */
 export {
-    GoalSummary,
-    InfoBoxes,
-    TrendView,
+    Calendar,
+    Featured,
+    Feeds,
+    Goals,
+    Highlights,
+    Newcomers,
+    Todo,
+    Trends,
+    Updates,
 }

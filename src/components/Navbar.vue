@@ -16,7 +16,7 @@
                     <img src="@/assets/img/cyber-hacker-icon.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="javascript://" class="d-block">Incognito <small>[sign-in]</small></a>
+                    <a href="javascript://" class="d-block" @click="signin">Incognito <small>[Sign in]</small></a>
                 </div>
             </div>
 
@@ -46,25 +46,25 @@
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Inbox</p>
+                                    <p>Notifications</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Compose</p>
+                                    <p>Messages</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Read</p>
+                                    <p>Mentions</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="nav-header">FOR BUIDLERS</li>
+                    <li class="nav-header">PRO BUIDLERS</li>
 
                     <!-- Projects -->
                     <li class="nav-item">
@@ -99,10 +99,44 @@
                                     <p>Graphics Studio</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Sandbox</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                                    <p>more workspaces...</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
-                    <li class="nav-header">COMMUNITY</li>
+                    <li class="nav-header">COMMUNITY CENTER</li>
+
+                    <!-- Latest News -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Latest News
+                                <span class="badge badge-info right">1</span>
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Source Feeds -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Discussions
+                                <span class="badge badge-info right">1</span>
+                            </p>
+                        </a>
+                    </li>
 
                     <!-- Event Calendar -->
                     <li class="nav-item">
@@ -111,28 +145,6 @@
                             <p>
                                 Event Calendar
                                 <span class="badge badge-info right">2</span>
-                            </p>
-                        </a>
-                    </li>
-
-                    <!-- News.cash -->
-                    <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
-                            <p>
-                                News.cash
-                                <span class="badge badge-info right">1</span>
-                            </p>
-                        </a>
-                    </li>
-
-                    <!-- Memo.cash -->
-                    <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
-                            <p>
-                                Memo.cash
-                                <span class="badge badge-info right">1</span>
                             </p>
                         </a>
                     </li>
@@ -168,7 +180,70 @@
                         </ul>
                     </li>
 
-                    <li class="nav-header">RECOMMENDED RESOURCES</li>
+                    <li class="nav-header">SUPPORT CENTER</li>
+
+                    <!-- Getting Started -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                BUIDLing 101
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Tutorials -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                Guides &amp; Tutorials
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- FAQ -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                                FAQ
+                            </p>
+                        </a>
+                    </li>
+
+                    <!-- Contact Us -->
+                    <li class="nav-item has-treeview">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-info-circle text-info"></i>
+                            <p>
+                                Contact Us
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="fab fa-slack nav-icon"></i>
+                                    <p>Slack</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="fas fa-comment-dots nav-icon"></i>
+                                    <p>Matrix</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <i class="fas fa-envelope-square nav-icon"></i>
+                                    <p>Open a Ticket</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-header">STAFF LINKS</li>
 
                     <!-- StackExchange -->
                     <li class="nav-item">
@@ -210,11 +285,13 @@
 
 <script>
 /* Import libraries. */
+import CashID from 'cashid'
 import moment from 'moment'
 
 export default {
     data: () => {
         return {
+            bitbox: null,
             version: '20.2.12',
         }
     },
@@ -222,6 +299,149 @@ export default {
         currentYear: function () {
             return moment().format('YYYY')
         },
+    },
+    methods: {
+        /**
+         * Initialize BITBOX
+         */
+        initBitbox() {
+            console.info('Initializing BITBOX..')
+
+            try {
+                /* Initialize BITBOX. */
+                this.bitbox = new window.BITBOX()
+            } catch (err) {
+                console.error(err)
+            }
+        },
+
+        /**
+         * Send Transaction
+         */
+        sendTx() {
+            console.log('SEND TX')
+
+            if (typeof window.web4bch !== 'undefined') {
+                /* Initialize Web4BCH. */
+                const web4bch = new window.Web4Bch(window.web4bch.currentProvider)
+                console.log('web4bch', web4bch)
+
+                console.log('DEFAULT ACCOUNT', web4bch.bch.defaultAccount)
+
+                /* Validate account. */
+                if (web4bch.bch && web4bch.bch.defaultAccount === undefined) {
+                    alert('please unlock your badgerwallet');
+                }
+
+                /* Set transaction parameters. */
+                const txParams = {
+                    to: 'bitcoincash:qqqkp6fxptkkllvfxpc9n60en5c6ft24vc40uuxv2c',
+                    from: web4bch.bch.defaultAccount,
+                    value: 1000
+                }
+
+                /* Initialize transaction function. */
+                const txFunc = (err, res) => {
+                    if (err) {
+                        console.error('ERROR: sendTransaction', err)
+
+                        console.log('ERROR MSG', err.message)
+
+                        /* Validate user approval. */
+                        if (err && err.message) {
+                            if (err.message.indexOf('User denied transaction signature') !== -1) {
+                                // FIXME: Add a modal message here.
+                                alert('User rejected the signature transaction.')
+                            }
+                        }
+
+                        return
+                    }
+
+                    console.log('TRANSACTION RESULT', res)
+                }
+
+                /* Send transaction. */
+                web4bch.bch.sendTransaction(txParams, txFunc)
+             } else {
+                 window.open('https://badgerwallet.cash')
+             }
+
+        },
+
+        /**
+         * Sign In
+         */
+        signin() {
+            console.log('SIGN IN')
+
+            if (typeof window.web4bch !== 'undefined') {
+                /* Initialize Web4BCH. */
+                const web4bch = new window.Web4Bch(window.web4bch.currentProvider)
+                console.log('web4bch', web4bch)
+
+                console.log('DEFAULT ACCOUNT', web4bch.bch.defaultAccount)
+
+                /* Validate account. */
+                if (web4bch.bch && web4bch.bch.defaultAccount === undefined) {
+                    alert('please unlock your badgerwallet');
+                }
+
+                /* Initialize CashId. */
+                // const cashid = new CashID()
+                const cashid = new CashID('api.devops.cash', '/v1/cashid')
+
+                /* Set action. */
+                const action = 'Sign in'
+
+                /* Set timestamp. */
+                // NOTE: This is NOT currently used for any purpose during
+                //       user authentication.
+                const data = moment().format('LLLL (x)')
+
+                /* Set metadata. */
+                // NOTE: This is NOT currently used for any purpose during
+                //       user authentication.
+                const metadata = {
+                    optional: {
+                        identity: ['name', 'nickname'],
+                        contact: ['email']
+                    }
+                }
+
+                /* Set URI. */
+                const cashIDRequest = cashid.createRequest(action, data, metadata)
+                console.log('CASHID REQUEST', cashIDRequest)
+
+                /* Set CashID buffer. */
+                const cidBuf = Buffer.from(cashIDRequest)
+                console.log('CASHID REQUEST BUFFER', cidBuf)
+
+                /* Set CashID (authorization) hash. */
+                const authHash = this.bitbox.Crypto.sha256(cidBuf).toString('hex')
+                console.log('CASHID AUTH HASH', authHash)
+
+                /* Initialize signature function. */
+                const sigFunc = (err, res) => {
+                    if (err) return console.error('SIGFUNC ERROR:', err)
+
+                    console.log('SIGFUNC RESPONSE', res, authHash)
+                }
+
+                web4bch.bch.sign(
+                    web4bch.bch.defaultAccount,
+                    cashIDRequest,
+                    sigFunc
+                )
+             } else {
+                 window.open('https://badgerwallet.cash')
+             }
+
+        },
+    },
+    created: function () {
+        /* Initialize BITBOX. */
+        this.initBitbox()
     },
 }
 </script>
