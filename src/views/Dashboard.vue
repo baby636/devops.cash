@@ -25,10 +25,12 @@
                                 <!-- Newcomers: Newest "verified" users -->
                                 <Newcomers />
                             </div>
+
                         </div>
 
                         <!-- Updates: Most recent "notable" project updates -->
                         <Updates />
+
                     </div>
 
                     <div class="col-md-4">
@@ -37,6 +39,10 @@
 
                         <!-- Calendar: Upcoming events and important dates -->
                         <Calendar />
+
+                        <!-- Todo: Top items to be completed -->
+                        <!-- <Todo /> -->
+
                     </div>
                 </div>
             </div>
@@ -55,6 +61,7 @@ import { Feeds } from '@/components/Dashboard'
 import { Goals } from '@/components/Dashboard'
 import { Highlights } from '@/components/Dashboard'
 import { Newcomers } from '@/components/Dashboard'
+// import { Todo } from '@/components/Dashboard'
 import { Trends } from '@/components/Dashboard'
 import { Updates } from '@/components/Dashboard'
 
@@ -68,6 +75,7 @@ export default {
         Goals,
         Highlights,
         Newcomers,
+        // Todo,
         Trends,
         Updates,
     },

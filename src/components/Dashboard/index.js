@@ -5,6 +5,7 @@ import Feeds from './Feeds'
 import Goals from './Goals'
 import Highlights from './Highlights'
 import Newcomers from './Newcomers'
+import Todo from './Todo'
 import Trends from './Trends'
 import Updates from './Updates'
 
@@ -16,6 +17,7 @@ export {
     Goals,
     Highlights,
     Newcomers,
+    Todo,
     Trends,
     Updates,
 }
