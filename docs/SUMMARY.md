@@ -12,9 +12,10 @@
 
     * [2.1. Publishing](projects/publishing.md)
 
-* [2. Guides & Tutorials]()
+* [2. Guides & Tutorials](guides.md)
 
     * [2.1. Web4BCH](guides/web4bch.md)
+    * [2.1. BCH Node 101](guides/bchn.md)
 
 * [3. More Documentation]()
 
