@@ -107,7 +107,6 @@
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
-                                    <!-- <i class="far fa-circle nav-icon"></i> -->
                                     <p>more workspaces...</p>
                                 </a>
                             </li>
@@ -162,19 +161,18 @@
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>ChartJS</p>
+                                    <p>Markets</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Flot</p>
+                                    <p>Blockchain</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Inline</p>
+                                    <p>more charts & data...</p>
                                 </a>
                             </li>
                         </ul>
@@ -212,10 +210,20 @@
                         </a>
                     </li>
 
+                    <!-- Documenation -->
+                    <li class="nav-item">
+                        <a href="javascript://" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Documenation
+                            </p>
+                        </a>
+                    </li>
+
                     <!-- Contact Us -->
                     <li class="nav-item has-treeview">
                         <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-info-circle text-info"></i>
+                            <i class="nav-icon fas fa-info-circle"></i>
                             <p>
                                 Contact Us
                                 <i class="right fas fa-angle-left"></i>
@@ -266,7 +274,7 @@
                     <!-- GitHub -->
                     <li class="nav-item">
                         <a href="https://github.com/modenero/devops.cash" target="_blank" class="nav-link">
-                            <i class="nav-icon fab fa-github text-info"></i>
+                            <i class="nav-icon fab fa-github text-primary"></i>
                             <p>Fork us on GitHub</p>
                             <i class="nav-icon fas fa-external-link-alt"></i>
                         </a>

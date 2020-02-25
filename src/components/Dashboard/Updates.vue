@@ -155,7 +155,7 @@ export default {
     font-size: 0.7em;
     color: rgba(30, 30, 30, 0.5);
 
-    width: 300px;
+    width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
