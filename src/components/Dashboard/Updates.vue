@@ -135,10 +135,6 @@ export default {
         /* Set JQuery. */
         const $ = window.$
 
-        // $('.sparkbar').peity('bar', {
-        //     width: '100'
-        // })
-
         /* Wait a tick for DOM to initialize. */
         setTimeout(() => {
             $('.sparkline').peity('line', {
