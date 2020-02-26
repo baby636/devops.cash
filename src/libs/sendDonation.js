@@ -9,7 +9,7 @@ import installBadger from '@/libs/installBadger'
 const donationAddress = 'bitcoincash:pp8skudq3x5hzw8ew7vzsw8tn4k8wxsqsv0lt0mf3g'
 
 /* Initialize donation amount. */
-const donationAmount = 1000
+const donationAmount = 2000
 
 /**
  * Send Donation

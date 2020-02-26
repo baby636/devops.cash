@@ -11,13 +11,22 @@
         </a>
 
         <div class="sidebar">
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex" v-if="cashAccount">
+                <div class="avatar">
+                    {{cashAccount.avatar}}
+                </div>
+                <div>
+                    <a href="javascript://" class="d-block nickname">{{cashAccount.nickname}}</a>
+                    <a href="javascript://" class="d-block signout" @click="signOut"><small>[ Sign Out ]</small></a>
+                </div>
+            </div>
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex" v-else>
                 <div class="image">
                     <img src="@/assets/img/cyber-hacker-icon.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="javascript://" class="d-block" @click="signin">Incognito <small>[Sign in]</small></a>
-                    <a href="javascript://" class="d-block" @click="register"><small>[Register]</small></a>
+                    <a href="javascript://" class="d-block" @click="signIn">Incognito <small>[ Sign in ]</small></a>
+                    <a href="javascript://" class="d-block" @click="donate"><small class="donate">[ donate $0.01 to charity ]</small></a>
                 </div>
             </div>
 
@@ -295,21 +304,44 @@
 <script>
 /* Import libraries. */
 import moment from 'moment'
+import superagent from 'superagent'
 
 /* Import modules. */
+import createSession from '@/libs/createSession'
 import sendDonation from '@/libs/sendDonation'
-import signIn from '@/libs/signIn'
 
 export default {
     data: () => {
         return {
             bitbox: null,
             version: '20.2.12',
+            cashAccounts: null,
         }
     },
     computed: {
         currentYear: function () {
             return moment().format('YYYY')
+        },
+
+        /**
+         * Selects a PRIMARY Cash Account for use during the session.
+         */
+        cashAccount: function () {
+            if (!this.cashAccounts) {
+                return null
+            }
+
+            /* Set avatar. */
+            const avatar = this.cashAccounts[0].accountEmoji
+
+            /* Set nickname. */
+            const nickname = `${this.cashAccounts[0].nameText}:#${this.cashAccounts[0].accountNumber} `
+
+            /* Return account details. */
+            return {
+                avatar,
+                nickname,
+            }
         },
     },
     methods: {
@@ -328,9 +360,9 @@ export default {
         },
 
         /**
-         * Register
+         * Donate to Charity
          */
-        register() {
+        donate() {
             /* Send donation. */
             sendDonation()
         },
@@ -338,10 +370,64 @@ export default {
         /**
          * Sign In
          */
-        signin() {
-            /* Sign In. */
-            signIn()
-        }
+        async signIn() {
+            /* Set api endpoint. */
+            // TODO Move to vuex store.
+            const ENDPOINT = 'https://api.devops.cash/v1'
+
+            /* Create a new session. */
+            const result = await createSession()
+                .catch(err => {
+                    if (err === 'DENIED') {
+                        alert('whathudoin bro? gotta approve dat')
+                    } else {
+                        console.error('CREATE SESSION ERROR:', err)
+                    }
+                })
+            console.log('CREATE SESSION RESULT', result)
+
+            /* Validate result. */
+            if (result && result.authHash) {
+                /* Set authorizaton hash. */
+                const authHash = result.authHash
+                console.log('AUTH HASH', authHash)
+
+                superagent
+                    .post(ENDPOINT + '/sessions')
+                    .send({ authHash })
+                    .set('Content-Type', 'application/json')
+                    .set('accept', 'json')
+                    .end((err, res) => {
+                        if (err) {
+                            return console.error('API ERROR:', err)
+                        }
+
+                        console.log('SESSION RESULT', res)
+
+                        /* Set session. */
+                        // TODO: Set to store.
+                        const session = res.body
+
+                        console.log('SESSION', session)
+
+                        /* Validate cash accounts. */
+                        if (session)
+                        /* Set cash accounts. */
+                        this.cashAccounts = session.cashAccounts
+                    })
+
+            } else {
+                alert('Something went wrong.')
+            }
+        },
+
+        /**
+         * Sign Out
+         */
+        signOut() {
+            // TODO: Handle ALL of this in the store.
+            this.cashAccounts = null
+        },
 
     },
     created: function () {
@@ -363,5 +449,21 @@ div .build-info a {
     color: rgba(255, 255, 255, 1.0);
 
     margin-left: 3px;
+}
+
+.avatar {
+    font-size: 1.8em;
+    margin-left: 10px;
+}
+.nickname {
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.signout {
+    margin-left: 10px;
+}
+.donate {
+    color: rgba(255, 180, 180, 0.8);
 }
 </style>
