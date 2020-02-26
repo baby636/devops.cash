@@ -17,6 +17,7 @@
                 </div>
                 <div class="info">
                     <a href="javascript://" class="d-block" @click="signin">Incognito <small>[Sign in]</small></a>
+                    <a href="javascript://" class="d-block" @click="register"><small>[Register]</small></a>
                 </div>
             </div>
 
@@ -293,8 +294,11 @@
 
 <script>
 /* Import libraries. */
-import CashID from 'cashid'
 import moment from 'moment'
+
+/* Import modules. */
+import sendDonation from '@/libs/sendDonation'
+import signIn from '@/libs/signIn'
 
 export default {
     data: () => {
@@ -324,128 +328,21 @@ export default {
         },
 
         /**
-         * Send Transaction
+         * Register
          */
-        sendTx() {
-            console.log('SEND TX')
-
-            if (typeof window.web4bch !== 'undefined') {
-                /* Initialize Web4BCH. */
-                const web4bch = new window.Web4Bch(window.web4bch.currentProvider)
-                console.log('web4bch', web4bch)
-
-                console.log('DEFAULT ACCOUNT', web4bch.bch.defaultAccount)
-
-                /* Validate account. */
-                if (web4bch.bch && web4bch.bch.defaultAccount === undefined) {
-                    alert('please unlock your badgerwallet');
-                }
-
-                /* Set transaction parameters. */
-                const txParams = {
-                    to: 'bitcoincash:qqqkp6fxptkkllvfxpc9n60en5c6ft24vc40uuxv2c',
-                    from: web4bch.bch.defaultAccount,
-                    value: 1000
-                }
-
-                /* Initialize transaction function. */
-                const txFunc = (err, res) => {
-                    if (err) {
-                        console.error('ERROR: sendTransaction', err)
-
-                        console.log('ERROR MSG', err.message)
-
-                        /* Validate user approval. */
-                        if (err && err.message) {
-                            if (err.message.indexOf('User denied transaction signature') !== -1) {
-                                // FIXME: Add a modal message here.
-                                alert('User rejected the signature transaction.')
-                            }
-                        }
-
-                        return
-                    }
-
-                    console.log('TRANSACTION RESULT', res)
-                }
-
-                /* Send transaction. */
-                web4bch.bch.sendTransaction(txParams, txFunc)
-             } else {
-                 window.open('https://badgerwallet.cash')
-             }
-
+        register() {
+            /* Send donation. */
+            sendDonation()
         },
 
         /**
          * Sign In
          */
         signin() {
-            console.log('SIGN IN')
+            /* Sign In. */
+            signIn()
+        }
 
-            if (typeof window.web4bch !== 'undefined') {
-                /* Initialize Web4BCH. */
-                const web4bch = new window.Web4Bch(window.web4bch.currentProvider)
-                console.log('web4bch', web4bch)
-
-                console.log('DEFAULT ACCOUNT', web4bch.bch.defaultAccount)
-
-                /* Validate account. */
-                if (web4bch.bch && web4bch.bch.defaultAccount === undefined) {
-                    alert('please unlock your badgerwallet');
-                }
-
-                /* Initialize CashId. */
-                // const cashid = new CashID()
-                const cashid = new CashID('api.devops.cash', '/v1/cashid')
-
-                /* Set action. */
-                const action = 'Sign in'
-
-                /* Set timestamp. */
-                // NOTE: This is NOT currently used for any purpose during
-                //       user authentication.
-                const data = moment().format('LLLL (x)')
-
-                /* Set metadata. */
-                // NOTE: This is NOT currently used for any purpose during
-                //       user authentication.
-                const metadata = {
-                    optional: {
-                        identity: ['name', 'nickname'],
-                        contact: ['email']
-                    }
-                }
-
-                /* Set URI. */
-                const cashIDRequest = cashid.createRequest(action, data, metadata)
-                console.log('CASHID REQUEST', cashIDRequest)
-
-                /* Set CashID buffer. */
-                const cidBuf = Buffer.from(cashIDRequest)
-                console.log('CASHID REQUEST BUFFER', cidBuf)
-
-                /* Set CashID (authorization) hash. */
-                const authHash = this.bitbox.Crypto.sha256(cidBuf).toString('hex')
-                console.log('CASHID AUTH HASH', authHash)
-
-                /* Initialize signature function. */
-                const sigFunc = (err, res) => {
-                    if (err) return console.error('SIGFUNC ERROR:', err)
-
-                    console.log('SIGFUNC RESPONSE', res, authHash)
-                }
-
-                web4bch.bch.sign(
-                    web4bch.bch.defaultAccount,
-                    cashIDRequest,
-                    sigFunc
-                )
-             } else {
-                 window.open('https://badgerwallet.cash')
-             }
-
-        },
     },
     created: function () {
         /* Initialize BITBOX. */
