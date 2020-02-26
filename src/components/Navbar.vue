@@ -302,6 +302,9 @@
 </template>
 
 <script>
+/* Initialize vuex. */
+import { mapActions, mapState } from 'vuex'
+
 /* Import libraries. */
 import moment from 'moment'
 import superagent from 'superagent'
@@ -315,10 +318,15 @@ export default {
         return {
             bitbox: null,
             version: '20.2.12',
-            cashAccounts: null,
         }
     },
     computed: {
+        ...mapState({
+            /* Profile */
+            sessionId: state => state.profile.sessionId,
+            cashAccounts: state => state.profile.cashAccounts,
+        }),
+
         currentYear: function () {
             return moment().format('YYYY')
         },
@@ -335,7 +343,7 @@ export default {
             const avatar = this.cashAccounts[0].accountEmoji
 
             /* Set nickname. */
-            const nickname = `${this.cashAccounts[0].nameText}:#${this.cashAccounts[0].accountNumber} `
+            const nickname = `${this.cashAccounts[0].nameText}#${this.cashAccounts[0].accountNumber} `
 
             /* Return account details. */
             return {
@@ -345,6 +353,12 @@ export default {
         },
     },
     methods: {
+        ...mapActions('profile', [
+            'deleteSession',
+            'initSession',
+            'updateCashAccounts',
+        ]),
+
         /**
          * Initialize BITBOX
          */
@@ -402,18 +416,23 @@ export default {
                             return console.error('API ERROR:', err)
                         }
 
-                        console.log('SESSION RESULT', res)
+                        // console.log('SESSION RESULT', res)
 
                         /* Set session. */
-                        // TODO: Set to store.
                         const session = res.body
 
-                        console.log('SESSION', session)
+                        /* Validate session. */
+                        if (session) {
+                            /* Update store. */
+                            this.initSession(session)
+                            console.log('SESSION', session)
+                        }
 
                         /* Validate cash accounts. */
-                        if (session)
-                        /* Set cash accounts. */
-                        this.cashAccounts = session.cashAccounts
+                        if (session && session.cashAccounts) {
+                            /* Set cash accounts. */
+                            this.updateCashAccounts(session.cashAccounts)
+                        }
                     })
 
             } else {
@@ -425,14 +444,17 @@ export default {
          * Sign Out
          */
         signOut() {
-            // TODO: Handle ALL of this in the store.
-            this.cashAccounts = null
+            /* Delete session. */
+            this.deleteSession()
         },
 
     },
     created: function () {
         /* Initialize BITBOX. */
         this.initBitbox()
+
+        console.log('SESSION ID', this.sessionId)
+        console.log('CASH ACCOUNTS', this.cashAccounts)
     },
 }
 </script>
