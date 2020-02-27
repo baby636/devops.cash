@@ -95,10 +95,10 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                <router-link to="/code-editor" class="nav-link">
+                                    <i class="far fa-keyboard nav-icon"></i>
                                     <p>Code Editor</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">

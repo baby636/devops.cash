@@ -1,7 +1,7 @@
 <template>
     <main>
         <!-- Header -->
-        <Header pageId="" />
+        <Header pageId="code-editor" />
 
         <!-- Page Section -->
         <section class="content">

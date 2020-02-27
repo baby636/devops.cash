@@ -1,17 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-/* Import MAIN components. */
+/* Import views. */
 import Dashboard from '@/views/Dashboard'
 
-/* DESKTOP */
-import FileManager from '@/views/Desktop/FileManager'
-import Notebook from '@/views/Desktop/Notebook'
-
-import Contributors from '@/views/Contributors'
-import Profile from '@/views/Profile'
-import Projects from '@/views/Projects'
-import ProjectDetail from '@/views/ProjectDetail'
+/* Import views. */
+import desktop from './desktop'
+import profiles from './profiles'
+import projects from './projects'
+import workspaces from './workspaces'
 
 /* Initialize Vue Router. */
 Vue.use(VueRouter)
@@ -19,31 +16,16 @@ Vue.use(VueRouter)
 /**
  * Initialize Routes
  */
-const routes = [{
-    path: '/',
-    component: Dashboard
-
-/* DESKTOP */
-}, {
-    path: '/file-mgr',
-    component: FileManager
-}, {
-    path: '/notebook',
-    component: Notebook
-
-}, {
-    path: '/contributors',
-    component: Contributors
-}, {
-    path: '/u/:profileId',
-    component: Profile
-}, {
-    path: '/projects',
-    component: Projects
-}, {
-    path: '/p/:projectId',
-    component: ProjectDetail
-}]
+const routes = [
+    {
+        path: '/',
+        component: Dashboard
+    },
+    ...desktop,
+    ...profiles,
+    ...projects,
+    ...workspaces,
+]
 
 /* Export Vue Router. */
 // NOTE: We're using "hash" mode in development due to problems
