@@ -38,7 +38,7 @@
                                 <span class="badge" :class="update.badge">{{update.status}}</span>
                             </td>
                             <td class="text-center">
-                                <div class="sparkline">{{update.sparkline}}</div>
+                                <div class="sparkline line-colours-green">{{update.sparkline}}</div>
                             </td>
                         </tr>
                     </tbody>
@@ -137,6 +137,18 @@ export default {
 
         /* Wait a tick for DOM to initialize. */
         setTimeout(() => {
+            $(".line-colours-red").peity("line", {
+              fill: ['red']
+            })
+
+            $(".line-colours-green").peity("line", {
+              fill: ['green']
+            })
+
+            $(".line-colours-blue").peity("line", {
+              fill: ['blue']
+            })
+
             $('.sparkline').peity('line', {
                 width: '100'
             })

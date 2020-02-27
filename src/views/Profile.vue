@@ -383,9 +383,12 @@ export default {
             profileId: null,
         }
     },
-    mounted: function () {
+    created: function () {
         /* Set profile id. */
         this.profileId = this.$route.params.profileId
+    },
+    mounted: function () {
+        //
     },
 }
 </script>

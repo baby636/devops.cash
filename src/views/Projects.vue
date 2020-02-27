@@ -251,23 +251,14 @@ export default {
     },
     methods: {
         openProfile(_profileId) {
-            this.$router.push(`/profile/${_profileId}`)
+            this.$router.push(`/u/${_profileId}`)
         },
 
         openProject(_projectId) {
-            this.$router.push(`/projects/${_projectId}`)
+            this.$router.push(`/p/${_projectId}`)
         },
     },
     created: async function () {
-        /* Verify session. */
-        const session = await this.hasSession()
-            .catch(err => console.error('Session Error:', err))
-
-        /* Validate session. */
-        if (!session) {
-            return
-        }
-
         superagent
             .get(this.apiUrl + '/projects')
             .set('accept', 'json')

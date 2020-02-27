@@ -42,14 +42,21 @@ export default {
     computed: {
         title: function () {
             switch(this.pageId) {
-            case 'contributors':
-                return 'Contributors'
             case 'dashboard':
                 return 'Dashboard'
+
+            /* DESKTOP */
+            case 'file-mgr':
+                return 'File Manager'
+            case 'notebook':
+                return 'Notebook'
+
+            case 'contributors':
+                return 'Contributors'
             case 'profile':
                 return 'Profile'
             case 'projects':
-            case 'projects-detail':
+            case 'project-detail':
                 return 'Projects'
             default:
                 return 'Unknown Page'

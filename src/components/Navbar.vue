@@ -57,22 +57,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Notifications</p>
-                                </a>
+                                <router-link to="/notebook" class="nav-link">
+                                    <i class="fas fa-file-word nav-icon"></i>
+                                    <p>Notebook</p>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Messages</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Mentions</p>
-                                </a>
+                                <router-link to="/file-mgr" class="nav-link">
+                                    <i class="far fa-folder-open nav-icon"></i>
+                                    <p>File Manager</p>
+                                </router-link>
                             </li>
                         </ul>
                     </li>
