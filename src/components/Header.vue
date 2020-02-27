@@ -82,6 +82,20 @@ export default {
             case 'lab':
                 return 'Lab Experiments'
 
+            /* SUPPORT */
+            case 'babel':
+                return 'Babel'
+            case 'buidling':
+                return 'BUIDLing 101'
+            case 'faq':
+                return 'FAQ'
+            case 'slack':
+                return 'Slack'
+            case 'tickets':
+                return 'Support Tickets'
+            case 'tutorials':
+                return 'Guides & Tutorials'
+
             default:
                 return 'Unknown Page'
             }

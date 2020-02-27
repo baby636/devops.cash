@@ -58,7 +58,7 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <router-link to="/notebook" class="nav-link">
-                                    <i class="fas fa-file-word nav-icon"></i>
+                                    <i class="fas fa-pencil-alt nav-icon"></i>
                                     <p>Notebook</p>
                                 </router-link>
                             </li>
@@ -67,6 +67,11 @@
                                     <i class="fas fa-folder-open nav-icon"></i>
                                     <p>File Manager</p>
                                 </router-link>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript://" class="nav-link">
+                                    <p>open my desktop...</p>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -87,7 +92,7 @@
                     <!-- Workspaces -->
                     <li class="nav-item has-treeview">
                         <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-table"></i>
                             <p>
                                 Workspaces
                                 <i class="fas fa-angle-left right"></i>
@@ -125,7 +130,7 @@
                     <!-- Latest News -->
                     <li class="nav-item">
                         <router-link to="/news" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
+                            <i class="nav-icon fas fa-newspaper"></i>
                             <p>
                                 Headline News
                                 <span class="badge badge-info right">{{newHeadlines}}</span>
@@ -136,7 +141,7 @@
                     <!-- Source Feeds -->
                     <li class="nav-item">
                         <router-link to="/discussions" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
+                            <i class="nav-icon fas fa-comments"></i>
                             <p>
                                 Discussions
                                 <span class="badge badge-info right">{{newDiscussions}}</span>
@@ -167,7 +172,7 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <router-link to="/markets" class="nav-link">
-                                    <i class="fas fa-poll-h nav-icon"></i>
+                                    <i class="fas fa-chart-bar nav-icon"></i>
                                     <p>Markets</p>
                                 </router-link>
                             </li>
@@ -189,37 +194,37 @@
 
                     <!-- Getting Started -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
+                        <router-link to="/buidling" class="nav-link">
+                            <i class="nav-icon fas fa-tools"></i>
                             <p>
                                 BUIDLing 101
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Tutorials -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
+                        <router-link to="/tutorials" class="nav-link">
+                            <i class="nav-icon fas fa-book-open"></i>
                             <p>
                                 Guides &amp; Tutorials
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- FAQ -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
+                        <router-link to="/faq" class="nav-link">
+                            <i class="nav-icon fas fa-info-circle"></i>
                             <p>
                                 FAQ
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Documenation -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
+                        <a href="https://docs.devops.cash" target="_blank" class="nav-link">
                             <i class="nav-icon fas fa-book"></i>
                             <p>
                                 Documenation
@@ -230,7 +235,7 @@
                     <!-- Contact Us -->
                     <li class="nav-item has-treeview">
                         <a href="javascript://" class="nav-link">
-                            <i class="nav-icon fas fa-info-circle"></i>
+                            <i class="nav-icon fas fa-headset"></i>
                             <p>
                                 Contact Us
                                 <i class="right fas fa-angle-left"></i>
@@ -238,22 +243,22 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
+                                <router-link to="/slack" class="nav-link">
                                     <i class="fab fa-slack nav-icon"></i>
                                     <p>Slack</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
+                                <router-link to="/babel" class="nav-link">
                                     <i class="fas fa-comment-dots nav-icon"></i>
-                                    <p>Matrix</p>
-                                </a>
+                                    <p>Babel</p>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
+                                <router-link to="/tickets" class="nav-link">
                                     <i class="fas fa-envelope-square nav-icon"></i>
                                     <p>Open a Ticket</p>
-                                </a>
+                                </router-link>
                             </li>
                         </ul>
                     </li>

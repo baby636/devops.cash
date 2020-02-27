@@ -9,6 +9,7 @@ import community from './community'
 import desktop from './desktop'
 import profiles from './profiles'
 import projects from './projects'
+import support from './support'
 import workspaces from './workspaces'
 
 /* Initialize Vue Router. */
@@ -26,6 +27,7 @@ const routes = [
     ...desktop,
     ...profiles,
     ...projects,
+    ...support,
     ...workspaces,
 ]
 
