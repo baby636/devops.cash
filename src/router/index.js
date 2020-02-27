@@ -35,7 +35,9 @@ const routes = [
 // NOTE: We're using "hash" mode in development due to problems
 //       resolving "dynamic" routes.
 export default new VueRouter({
-    mode: process.env.NODE_ENV === 'production' ? 'history' : 'hash',
+    mode: 'hash', // NOTE: Use 'hash' when running locally.
+    // mode: 'history', // NOTE: Use 'hash' when deploying to server.
+    // mode: process.env.NODE_ENV === 'production' ? 'history' : 'hash',
     linkActiveClass: 'active', // TODO: We should localize this to Navbar.vue's scope.
     routes
 })
