@@ -5,6 +5,18 @@ import superagent from 'superagent'
 const SessionManager = {}
 
 /**
+ * Cleanup (Session)
+ */
+const cleanup = function (_this) {
+    /* Delete session. */
+    _this.$store.dispatch('profile/deleteSession')
+
+    /* Navigate back to dashboard. */
+    // TODO: Show modal OR alert notification.
+    _this.$router.push('/')
+}
+
+/**
  * Session Manager Plugin Installation
  *
  * NOTE: Called from `main.js`, using `Vue.use()`.
@@ -34,9 +46,8 @@ SessionManager.install = function (_Vue) {
                             if (err) {
                                 // console.error('SESSION MANAGER ERROR:', err)
 
-                                /* Navigate back to dashboard. */
-                                // TODO: Show modal OR alert notification.
-                                this.$router.push('/')
+                                /* Cleanup session. */
+                                cleanup(this)
 
                                 /* Return error. */
                                 return reject(err)
@@ -50,18 +61,16 @@ SessionManager.install = function (_Vue) {
 
                             /* Validate session. */
                             if (!session) {
-                                /* Navigate back to dashboard. */
-                                // TODO: Show modal OR alert notification.
-                                this.$router.push('/')
+                                /* Cleanup session. */
+                                cleanup(this)
 
                                 return reject('Session Manager ERROR!')
                             }
 
                             /* Validate session (is Active). */
                             if (!session.isActive) {
-                                /* Navigate back to dashboard. */
-                                // TODO: Show modal OR alert notification.
-                                this.$router.push('/')
+                                /* Cleanup session. */
+                                cleanup(this)
 
                                 return reject('Session has EXPIRED!')
                             }
