@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Dashboard from '@/views/Dashboard'
 
 /* Import views. */
+import community from './community'
 import desktop from './desktop'
 import profiles from './profiles'
 import projects from './projects'
@@ -21,6 +22,7 @@ const routes = [
         path: '/',
         component: Dashboard
     },
+    ...community,
     ...desktop,
     ...profiles,
     ...projects,

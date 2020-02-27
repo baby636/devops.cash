@@ -45,6 +45,18 @@ export default {
             case 'dashboard':
                 return 'Dashboard'
 
+            /* COMMUNITY */
+            case 'blockchain':
+                return 'Blockchain Insights'
+            case 'discussions':
+                return 'Discussions'
+            case 'events':
+                return 'Event Calendar'
+            case 'markets':
+                return 'Market Insights'
+            case 'news':
+                return 'Headline News'
+
             /* DESKTOP */
             case 'file-mgr':
                 return 'File Manager'

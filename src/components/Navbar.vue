@@ -29,7 +29,7 @@
                 </div>
                 <div class="info">
                     <a href="javascript://" class="d-block" @click="signIn">Incognito <small>[ Sign in ]</small></a>
-                    <a href="javascript://" class="d-block" @click="donate"><small class="donate">[ donate $0.01 to charity ]</small></a>
+                    <a href="javascript://" class="d-block" @click="donate"><small class="donate">[ donate $0.01 to causes ]</small></a>
                 </div>
             </div>
 
@@ -124,35 +124,35 @@
 
                     <!-- Latest News -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
+                        <router-link to="/news" class="nav-link">
                             <i class="nav-icon fas fa-file"></i>
                             <p>
-                                Latest News
-                                <span class="badge badge-info right">1</span>
+                                Headline News
+                                <span class="badge badge-info right">{{newHeadlines}}</span>
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Source Feeds -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
+                        <router-link to="/discussions" class="nav-link">
                             <i class="nav-icon fas fa-file"></i>
                             <p>
                                 Discussions
-                                <span class="badge badge-info right">1</span>
+                                <span class="badge badge-info right">{{newDiscussions}}</span>
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Event Calendar -->
                     <li class="nav-item">
-                        <a href="javascript://" class="nav-link">
+                        <router-link to="/events" class="nav-link">
                             <i class="nav-icon fas fa-calendar-alt"></i>
                             <p>
                                 Event Calendar
-                                <span class="badge badge-info right">2</span>
+                                <span class="badge badge-info right">{{numEvents}}</span>
                             </p>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Charts & Data -->
@@ -166,16 +166,16 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="fas fa-circle nav-icon"></i>
+                                <router-link to="/markets" class="nav-link">
+                                    <i class="fas fa-poll-h nav-icon"></i>
                                     <p>Markets</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="fas fa-circle nav-icon"></i>
+                                <router-link to="/blockchain" class="nav-link">
+                                    <i class="fas fa-link nav-icon"></i>
                                     <p>Blockchain</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
@@ -374,6 +374,18 @@ export default {
 
             /* Return account details. */
             return account
+        },
+
+        newHeadlines() {
+            return 1
+        },
+
+        newDiscussions() {
+            return ''
+        },
+
+        numEvents() {
+            return 1
         },
     },
     methods: {
