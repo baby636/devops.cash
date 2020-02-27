@@ -4,19 +4,22 @@
             <img
                 src="@/assets/img/icon.png"
                 alt="DevOps Icon"
-                class="brand-image img-circle elevation-3"
+                class="brand-image img-rounded elevation-3"
                 style="opacity: .8"
             >
             <span class="brand-text font-weight-light">DevOps.cash</span>
         </a>
 
         <div class="sidebar">
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex" v-if="cashAccount">
-                <div class="avatar">
-                    {{cashAccount.avatar}}
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex" v-if="account">
+                <div class="avatar" v-if="account.emoji">
+                    {{account.emoji}}
+                </div>
+                <div class="avatar" v-if="account.blockie">
+                    <img :src="account.blockie" class="img-circle" elevation-3 />
                 </div>
                 <div>
-                    <a href="javascript://" class="d-block nickname">{{cashAccount.nickname}}</a>
+                    <a href="javascript://" class="d-block nickname">{{account.nickname}}</a>
                     <a href="javascript://" class="d-block signout" @click="signOut"><small>[ Sign Out ]</small></a>
                 </div>
             </div>
@@ -306,6 +309,7 @@
 import { mapActions, mapState } from 'vuex'
 
 /* Import libraries. */
+import makeBlockie from 'ethereum-blockies-base64'
 import moment from 'moment'
 import superagent from 'superagent'
 
@@ -323,6 +327,7 @@ export default {
     computed: {
         ...mapState({
             /* Profile */
+            session: state => state.profile.session,
             sessionId: state => state.profile.sessionId,
             cashAccounts: state => state.profile.cashAccounts,
         }),
@@ -332,24 +337,46 @@ export default {
         },
 
         /**
-         * Selects a PRIMARY Cash Account for use during the session.
+         * Selects a PRIMARY account for use during the session.
          */
-        cashAccount: function () {
-            if (!this.cashAccounts) {
-                return null
+        account: function () {
+            /* Initialize account. */
+            let account = null
+
+            if (this.cashAccounts && this.cashAccounts.length > 0) {
+                /* Set emoji. */
+                const emoji = this.cashAccounts[0].accountEmoji
+
+                /* Set nickname. */
+                const nickname = `${this.cashAccounts[0].nameText}#${this.cashAccounts[0].accountNumber}`
+
+                /* Set account. */
+                account = {
+                    emoji,
+                    nickname,
+                }
             }
 
-            /* Set avatar. */
-            const avatar = this.cashAccounts[0].accountEmoji
+            /* Validate session. */
+            if (account === null && this.session) {
+                /* Set address. */
+                const address = this.session.validation.address
 
-            /* Set nickname. */
-            const nickname = `${this.cashAccounts[0].nameText}#${this.cashAccounts[0].accountNumber} `
+                /* Generate blockie. */
+                const blockie = makeBlockie(address)
+
+                /* Set nickname. */
+                const nickname = `${address.slice(12, 20)} ... ${address.slice(-8)}`
+
+                /* Set account. */
+                account = {
+                    blockie,
+                    nickname,
+                }
+            }
 
             /* Return account details. */
-            return {
-                avatar,
-                nickname,
-            }
+            return account
         },
     },
     methods: {
@@ -478,7 +505,7 @@ div .build-info a {
     margin-left: 10px;
 }
 .nickname {
-    font-size: 1.2em;
+    font-size: 1.15em;
     margin-top: 5px;
     margin-left: 10px;
 }
