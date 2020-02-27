@@ -51,13 +51,25 @@ export default {
             case 'notebook':
                 return 'Notebook'
 
+            /* PROFILES */
             case 'contributors':
                 return 'Contributors'
             case 'profile':
                 return 'Profile'
+
+            /* PROJECTS */
             case 'projects':
             case 'project-detail':
                 return 'Projects'
+
+            /* PROJECTS */
+            case 'code-editor':
+                return 'Code Editor'
+            case 'graphics-studio':
+                return 'Graphics Studio'
+            case 'lab':
+                return 'Lab Experiments'
+
             default:
                 return 'Unknown Page'
             }

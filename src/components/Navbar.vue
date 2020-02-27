@@ -64,7 +64,7 @@
                             </li>
                             <li class="nav-item">
                                 <router-link to="/file-mgr" class="nav-link">
-                                    <i class="far fa-folder-open nav-icon"></i>
+                                    <i class="fas fa-folder-open nav-icon"></i>
                                     <p>File Manager</p>
                                 </router-link>
                             </li>
@@ -96,21 +96,21 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <router-link to="/code-editor" class="nav-link">
-                                    <i class="far fa-keyboard nav-icon"></i>
+                                    <i class="fas fa-keyboard nav-icon"></i>
                                     <p>Code Editor</p>
                                 </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                <router-link to="/graphics-studio" class="nav-link">
+                                    <i class="fas fa-magic nav-icon"></i>
                                     <p>Graphics Studio</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sandbox</p>
-                                </a>
+                                <router-link to="/lab" class="nav-link">
+                                    <i class="fas fa-flask nav-icon"></i>
+                                    <p>Lab Experiments</p>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
@@ -167,13 +167,13 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="fas fa-circle nav-icon"></i>
                                     <p>Markets</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript://" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="fas fa-circle nav-icon"></i>
                                     <p>Blockchain</p>
                                 </a>
                             </li>
