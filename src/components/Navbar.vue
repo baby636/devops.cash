@@ -330,6 +330,9 @@ export default {
             session: state => state.profile.session,
             sessionId: state => state.profile.sessionId,
             cashAccounts: state => state.profile.cashAccounts,
+
+            /* System */
+            apiUrl: state => state.system.apiUrl,
         }),
 
         currentYear: function () {
@@ -412,15 +415,11 @@ export default {
          * Sign In
          */
         async signIn() {
-            /* Set api endpoint. */
-            // TODO Move to vuex store.
-            const ENDPOINT = 'https://api.devops.cash/v1'
-
             /* Create a new session. */
             const result = await createSession()
                 .catch(err => {
                     if (err === 'DENIED') {
-                        alert('whathudoin bro? gotta approve dat')
+                        alert('whachudoin bro? gotta approve dat')
                     } else {
                         console.error('CREATE SESSION ERROR:', err)
                     }
@@ -434,9 +433,8 @@ export default {
                 console.log('AUTH HASH', authHash)
 
                 superagent
-                    .post(ENDPOINT + '/sessions')
+                    .post(this.apiUrl + '/sessions')
                     .send({ authHash })
-                    .set('Content-Type', 'application/json')
                     .set('accept', 'json')
                     .end((err, res) => {
                         if (err) {

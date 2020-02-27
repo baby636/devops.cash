@@ -44,7 +44,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr @click="openProject('devops-cash')">
+                                <tr @click="openProject('devops-cash-62b422f9')">
                                     <td>
                                         1
                                     </td>
@@ -220,6 +220,9 @@
 </template>
 
 <script>
+/* Initialize vuex. */
+import { mapState } from 'vuex'
+
 /* Import modules. */
 import superagent from 'superagent'
 
@@ -240,6 +243,12 @@ export default {
             projects: null
         }
     },
+    computed: {
+        ...mapState({
+            /* System */
+            apiUrl: state => state.system.apiUrl,
+        }),
+    },
     methods: {
         openProfile(_profileId) {
             this.$router.push(`/profile/${_profileId}`)
@@ -249,25 +258,32 @@ export default {
             this.$router.push(`/projects/${_projectId}`)
         },
     },
-    created: function () {
-        /* Set api endpoint. */
-        // TODO Move to vuex store.
-        const ENDPOINT = 'https://api.devops.cash/v1'
+    created: async function () {
+        /* Verify session. */
+        const session = await this.hasSession()
+            .catch(err => console.error('Session Error:', err))
+
+        /* Validate session. */
+        if (!session) {
+            return
+        }
 
         superagent
-            .get(ENDPOINT + '/projects')
-            // .send({ name: 'Manny', species: 'cat' }) // sends a JSON post body
-            // .set('X-API-Key', 'foobar')
+            .get(this.apiUrl + '/projects')
             .set('accept', 'json')
             .end((err, res) => {
                 if (err) {
                     return console.error('API ERROR:', err)
                 }
 
-                console.log('API RESULT', res)
+                // console.log('API RESPONSE', res)
 
                 /* Set projects. */
-                this.projects = res.body
+                const projects = res.body
+                console.log('PROJECTS', projects)
+
+                /* Set projects. */
+                this.projects = projects
             })
     },
     mounted: function () {

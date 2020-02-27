@@ -1,6 +1,7 @@
 /* Import modules. */
 import Vue from 'vue'
 import VueSVGIcon from 'vue-svgicon'
+import SessionManager from './libs/SessionManager'
 
 /* Import (local) modules. */
 import router from './router'
@@ -11,6 +12,9 @@ import store from './store'
 
 /* Import main application. */
 import App from './App.vue'
+
+/* Initialize session manager. */
+Vue.use(SessionManager)
 
 /* Initialize SVG icons. */
 Vue.use(VueSVGIcon)

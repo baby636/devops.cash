@@ -5,6 +5,9 @@
 const state = {
     error: null,
     notification: null,
+
+    /* Initialize API Endpoint (constant). */
+    apiUrl: 'https://api.devops.cash/v1',
 }
 
 /* Getters. */
