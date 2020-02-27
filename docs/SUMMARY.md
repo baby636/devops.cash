@@ -3,6 +3,7 @@
 * [Welcome](README.md)
 
     * [0.1. Why DevOps.cash?](welcome/why.md)
+    * [0.2. BCH.StackExchange](welcome/bch-se.md)
 
 * [1. User Accounts]()
 
