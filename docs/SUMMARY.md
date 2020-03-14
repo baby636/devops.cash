@@ -2,8 +2,8 @@
 
 * [Welcome](README.md)
 
-    * [0.1. Why DevOps.cash?](welcome/why.md)
-    * [0.2. BCH.StackExchange](welcome/bch-se.md)
+    * [0.1. Foreword](welcome/foreword.md)
+    * [0.2. BCH.StackExchange](welcome/se.md)
 
 * [1. User Accounts]()
 
@@ -26,7 +26,7 @@
 
 * [4. Legal]()
 
-    * [4.1. Code of Conduct]()
+    * [4.1. Code of Conduct](legal/CODE_OF_CONDUCT.md)
     * [4.2. Terms of Use]()
     * [4.3. Privacy Notice]()
     * [4.4. Cookie Notice]()
