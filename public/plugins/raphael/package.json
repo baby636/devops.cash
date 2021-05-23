@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "qunitjs": "^2.4.1",
-    "webpack": "4.42.0",
+    "webpack": "5.36.2",
     "webpack-cli": "3.3.11"
   },
   "scripts": {
