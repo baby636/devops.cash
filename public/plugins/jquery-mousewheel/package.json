@@ -40,7 +40,7 @@
     "grunt": "1.0.4",
     "grunt-contrib-connect": "~2.1.0",
     "grunt-contrib-jshint": "2.1.0",
-    "grunt-contrib-uglify": "4.0.1"
+    "grunt-contrib-uglify": "5.2.2"
   },
   "directories": {
     "test": "test"
